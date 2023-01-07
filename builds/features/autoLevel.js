@@ -16,7 +16,8 @@ module.exports = {
             "Z_MIN_PROBE_REPEATABILITY_TEST"
         ],
         disable: [
-            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN"
+            "Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN",
+            "PROBE_MANUALLY"
         ]
     },
     configuration_adv: {
