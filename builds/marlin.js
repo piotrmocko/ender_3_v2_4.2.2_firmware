@@ -1,8 +1,14 @@
 module.exports = {
-    extends: "builds/default.js",
+    board_env: "STM32F103RE_creality",
     meta: {
-        stable_name: "ender_3_v2_4.2.2-{{marlin_version}}-base-{{uid}}",
-        nightly_name: "ender_3_v2_4.2.2-{{current_date}}-base-{{uid}}"
+        stable_name: "ender_3_v2_4.2.2-{{marlin_version}}-default-{{uid}}",
+        nightly_name: "ender_3_v2_4.2.2-{{current_date}}-default-{{uid}}"
+    },
+    based_on: {
+        repo: "https://github.com/MarlinFirmware/Configurations/",
+        path: "/config/examples/Creality/Ender-3 V2/CrealityV422/MarlinUI",
+        stable_branch: "release-{{marlin_version}}",
+        nightly_branch: "bugfix-2.1.x"
     },
     configuration: {
         enable: [
@@ -16,6 +22,7 @@ module.exports = {
             "DWIN_CREALITY_LCD_JYERSUI"
         ],
         disable: [
+            "LCD_BED_LEVELING",
             "DWIN_CREALITY_LCD",
             "DWIN_LCD_PROUI",
             "DWIN_MARLINUI_PORTRAIT",
